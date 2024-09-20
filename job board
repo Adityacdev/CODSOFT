@@ -1,0 +1,167 @@
+html code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CODSOFT Job Board</title>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
+
+homepage.js
+
+import React from 'react';
+
+const HomePage = ({ featuredJobs }) => {
+  return (
+    <div className="homepage">
+      <h1>Welcome to CODSOFT Job Board</h1>
+      <div className="featured-jobs">
+        {featuredJobs.map(job => (
+          <div key={job.id} className="job-card">
+            <h3>{job.title}</h3>
+            <p>{job.company}</p>
+            <p>{job.location}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default HomePage;
+
+joblisting.js
+
+import React, { useState, useEffect } from 'react';
+
+const JobListings = () => {
+  const [jobs, setJobs] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/jobs')
+      .then(response => response.json())
+      .then(data => setJobs(data));
+  }, []);
+
+  return (
+    <div className="job-listings">
+      <h2>Job Openings</h2>
+      {jobs.map(job => (
+        <div key={job.id} className="job-card">
+          <h3>{job.title}</h3>
+          <p>{job.company}</p>
+          <p>{job.location}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default JobListings;
+
+
+app.css
+
+/* App.css */
+.App {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+index.css
+
+import React from 'react';
+import './App.css'; // Ensure this file exists in the same directory
+
+const App = () => {
+  return (
+    <div className="App">
+      <h1>Welcome to CODSOFT Job Board</h1>
+      {/* Add your components and content here */}
+    </div>
+  );
+};
+
+export default App;
+
+job board .css
+
+/* jobboard.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+job.css
+
+const mongoose = require('mongoose');
+
+const jobSchema = new mongoose.Schema({
+  title: String,
+  company: String,
+  location: String,
+  description: String,
+  postedDate: { type: Date, default: Date.now },
+});
+
+module.exports = mongoose.model('Job', jobSchema);
+
+
+index.js
+
+const express = require('express');
+const mongoose = require('mongoose');
+const app = express();
+const port = 5000;
+
+// Middleware
+app.use(express.json());
+
+// Basic route
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+// Connect to MongoDB (replace 'yourMongoDBURI' with your actual MongoDB URI)
+mongoose.connect('yourMongoDBURI', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log('MongoDB connection error:', err));
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
+});
+
+
+server.js
+
+const express = require('express');
+const mongoose = require('mongoose');
+const jobRoutes = require('./routes/jobs');
+
+const app = express();
+
+app.use(express.json());
+app.use('/api/jobs', jobRoutes);
+
+mongoose.connect('mongodb://localhost:27017/jobboard', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('Could not connect to MongoDB...', err));
+
+app.listen(5000, () => console.log('Server is running on port 5000'));
+
+
