@@ -1,0 +1,231 @@
+html code 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Tendulkar - A Legend</title>
+    <link rel="stylesheet" href="tributepage.css">
+</head>
+<body>
+    <header>
+        <h1>Sachin Tendulkar</h1>
+        <h2>The Master Blaster</h2>
+    </header>
+
+    <section class="image-center">
+        <img src="C:\Users\HP\Downloads\97d0c19a50104e6afc5bb6f11240fa98.jpg" alt="Sachin Tendulkar">
+    </section>
+
+    <section class="about">
+        <h3>About Sachin Tendulkar</h3>
+        <p>Sachin Tendulkar is widely regarded as one of the greatest cricketers of all time. Born on April 24, 1973, in Mumbai, India, he made his international debut at the age of 16. Over his illustrious career, Tendulkar became the highest run-scorer in the history of Test and ODI cricket, setting numerous records along the way.</p>
+        <p>Known as the "Master Blaster," Sachin's technique, temperament, and ability to adapt to any situation made him a formidable opponent on the field. His contributions to Indian cricket are unparalleled, and he remains an inspiration to aspiring cricketers worldwide.</p>
+    </section>
+
+    <section class="career-highlights">
+        <h3>Career Highlights</h3>
+        <ul>
+            <li>First player to score 100 international centuries.</li>
+            <li>Highest run-scorer in the history of Test and ODI cricket.</li>
+            <li>Only player to score more than 30,000 runs in international cricket.</li>
+            <li>Recipient of the Bharat Ratna, India's highest civilian award.</li>
+            <li>Played a pivotal role in India's victory in the 2011 Cricket World Cup.</li>
+        </ul>
+    </section>
+
+    <section class="qualities">
+        <h3>Admirable Qualities</h3>
+        <ul>
+            <li><strong>Determination:</strong> Sachin's dedication to the game and his relentless pursuit of excellence is legendary.</li>
+            <li><strong>Humility:</strong> Despite his success, Sachin remained grounded and always respected his fans and fellow players.</li>
+            <li><strong>Resilience:</strong> Overcoming injuries and setbacks, Sachin's ability to bounce back and perform at the highest level is inspiring.</li>
+            <li><strong>Sportsmanship:</strong> Sachin was always known for his fair play and respect for the game, setting a high standard for others.</li>
+            <li><strong>Leadership:</strong> As a captain and senior player, Sachin led by example, inspiring his teammates and millions of fans.</li>
+        </ul>
+    </section>
+
+    <section class="impact">
+        <h3>Impact on Indian Cricket</h3>
+        <p>Sachin Tendulkar's impact on Indian cricket is immeasurable. He brought a sense of hope and pride to the nation, becoming a symbol of excellence and perseverance. His records and achievements are a testament to his hard work, discipline, and passion for the game. Sachin's presence on the field often drew large crowds, and his performances provided joy and excitement to millions of fans around the world.</p>
+        <p>Beyond the records and accolades, Sachin's legacy lies in the inspiration he provided to generations of cricketers. Many of today's cricket stars grew up idolizing him, and his influence continues to shape the future of Indian cricket.</p>
+    </section>
+
+    <section class="quotes">
+        <h3>Famous Quotes About Sachin</h3>
+        <blockquote>
+            "I have seen God. He bats at No. 4 for India." — Matthew Hayden
+        </blockquote>
+        <blockquote>
+            "When you play against Tendulkar, you almost want to see him get a few runs just to see him bat." — Mark Waugh
+        </blockquote>
+        <blockquote>
+            "Sachin Tendulkar has often reminded me of a veteran army colonel, who has seen so many battles and won them all." — Allan Donald
+        </blockquote>
+    </section>
+
+    <section class="stats">
+        <h3>Key Statistics</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Format</th>
+                    <th>Matches</th>
+                    <th>Runs</th>
+                    <th>Average</th>
+                    <th>100s</th>
+                    <th>50s</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tests</td>
+                    <td>200</td>
+                    <td>15,921</td>
+                    <td>53.78</td>
+                    <td>51</td>
+                    <td>68</td>
+                </tr>
+                <tr>
+                    <td>ODIs</td>
+                    <td>463</td>
+                    <td>18,426</td>
+                    <td>44.83</td>
+                    <td>49</td>
+                    <td>96</td>
+                </tr>
+                <tr>
+                    <td>T20Is</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>10.00</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 - Tribute to Sachin Tendulkar. Designed by Aditya C Dev</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+CSS code
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.image-center {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-center img {
+    width: auto%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-center img:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+.about, .career-highlights, .qualities, .impact, .quotes, .stats {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 1.1em;
+}
+
+.about:hover, .career-highlights:hover, .qualities:hover, .impact:hover, .quotes:hover, .stats:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-size: 1.1em;
+}
+
+.about h3, .career-highlights h3, .qualities h3, .impact h3, .quotes h3, .stats h3 {
+    font-size: 2em;
+    color: #0066cc;
+}
+
+.career-highlights ul, .qualities ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.quotes blockquote {
+    font-size: 1.1em;
+    font-style: italic;
+    margin: 10px 0;
+    padding-left: 20px;
+    border-left: 5px solid #0066cc;
+}
+
+.stats table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stats th, .stats td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.stats th {
+    background-color: #0066cc;
+    color: #fff;
+}
+
+.stats tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+footer {
+    text-align: center;
+    padding: 00px;
+    background-color: #0066cc;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
