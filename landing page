@@ -1,0 +1,380 @@
+html code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Landing Page</title>
+    <link rel="stylesheet" href="landingpage.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to CODSOFT</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Your Imagination, Our Creation</h2>
+            <p>Create stunning websites with our tools and services.</p>
+            <button>Get Started</button>
+            <img src="C:\Users\HP\Downloads\photo-1498050108023-c5249f4df085.jpeg" alt="Hero Image">
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We specialize in turning your creative ideas into reality.</p>
+            <img src="C:\Users\HP\Downloads\html-css-collage-concept-with-person_23-2150062008.avif" alt="About Us Image">
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-content">
+                <img src="C:\Users\HP\Downloads\mark-804938_640.webp" alt="Service Image">
+                <div class="service-text">
+                    <h3>Web Design</h3>
+                    <p>Beautiful and responsive web designs that stand out.</p>
+                </div>
+            </div>
+            <div class="service-content">
+                <img src="C:\Users\HP\Downloads\mark-804938_640.webp" alt="Service Image">
+                <div class="service-text">
+                    <h3>Development</h3>
+                    <p>Powerful and scalable web applications tailored to your needs.</p>
+                </div>
+            </div>
+            <div class="service-content">
+                <img src="C:\Users\HP\Downloads\mark-804938_640.webp" alt="Service Image">
+                <div class="service-text">
+                    <h3>SEO Optimization</h3>
+                    <p>Improve your website's visibility and ranking on search engines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <p>Explore our previous projects to see what we can do for you.</p>
+            <img src="C:\Users\HP\Downloads\word-portfolio-red-salient-among-260nw-175037960.webp" alt="Portfolio Image">
+        </div>
+    </section>
+
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <p>Read what our satisfied clients have to say about our services.</p>
+            <img src="C:\Users\HP\Downloads\depositphotos_629095346-stock-photo-male-hand-using-laptop-computer.jpg" alt="Testimonials Image">
+        </div>
+    </section>
+
+    <section id="blog" class="section">
+        <div class="container">
+            <h2>Our Blog</h2>
+            <p>Stay updated with the latest trends in web development and design.</p>
+            <img src="C:\Users\HP\Downloads\what-is-a-blog-1.png" alt="Blog Image">
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CODESOFT. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+CSS code
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F5A623; /* Color change on hover */
+}
+
+/* Hero Section */
+#hero {
+    background-color: #50E3C2;
+    color: #333;
+    text-align: center;
+    padding: 60px 0;
+    position: relative;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin: 0 0 20px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin: 0 0 30px;
+}
+
+#hero button {
+    background-color: #F5A623;
+    border: none;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#hero button:hover {
+    background-color: #D9A72D; /* Darker button color on hover */
+}
+
+#hero img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+#hero img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* About Section */
+#about {
+    background-color: #fff;
+    color: #333;
+    padding: 60px 0;
+    position: relative;
+}
+
+#about h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Services Section */
+#services {
+    background-color: #7ED321;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.service-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    background-color: #B8E986;
+    padding: 20px;
+    border-radius: 8px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-content:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.service-content img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 40px;
+    border-radius: 8px;
+}
+
+.service-text h3 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+.service-text p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Portfolio Section */
+#portfolio {
+    background-color: #F8E71C;
+    color: #333;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#portfolio h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+#portfolio p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#portfolio img {
+    max-width: 80%; /* Slightly larger image */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin: 0 auto; /* Center the image */
+    display: block; /* Ensure the image is treated as a block element */
+    transition: transform 0.3s ease;
+}
+
+#portfolio img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #BD10E0;
+    color: #fff;
+    padding: 60px 0;
+}
+
+#testimonials h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#testimonials p {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#testimonials img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+#testimonials img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Blog Section */
+#blog {
+    background-color: #9013FE;
+    color: #fff;
+    padding: 60px 0;
+}
+
+#blog h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#blog p {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#blog img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+#blog img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #4A90E2;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
