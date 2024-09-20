@@ -1,0 +1,185 @@
+html code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="btn" onclick="clearDisplay()">C</button>
+            <button class="btn" onclick="appendNumber('7')">7</button>
+            <button class="btn" onclick="appendNumber('8')">8</button>
+            <button class="btn" onclick="appendNumber('9')">9</button>
+            <button class="btn operator" onclick="appendOperator('/')">/</button>
+            
+            <button class="btn" onclick="appendNumber('4')">4</button>
+            <button class="btn" onclick="appendNumber('5')">5</button>
+            <button class="btn" onclick="appendNumber('6')">6</button>
+            <button class="btn operator" onclick="appendOperator('*')">*</button>
+            
+            <button class="btn" onclick="appendNumber('1')">1</button>
+            <button class="btn" onclick="appendNumber('2')">2</button>
+            <button class="btn" onclick="appendNumber('3')">3</button>
+            <button class="btn operator" onclick="appendOperator('-')">-</button>
+            
+            <button class="btn" onclick="appendNumber('0')">0</button>
+            <button class="btn" onclick="appendOperator('.')">.</button>
+            <button class="btn operator" onclick="calculate()">=</button>
+            <button class="btn operator" onclick="appendOperator('+')">+</button>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
+
+
+CSS CODE
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f29f6b, #f7a96a, #f4f4f4);
+}
+
+.calculator {
+    border: 2px solid #f7f2f0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    background: #fff;
+}
+
+.display {
+    background-color: #d24e81;
+    color: #fff;
+    font-size: 2em;
+    text-align: right;
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #bd961e;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+
+.btn {
+    background-color: #ead596;
+    border: 1px solid #f8e348;
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #e8f556;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    background-color: #2095b6;
+    transform: translateY(2px);
+}
+
+/* Special colors for operators */
+.btn.operator {
+    background-color: #311bbebe;
+    color: #f5e85e;
+}
+
+.btn.operator:hover {
+    background-color: #205a2582;
+}
+
+.btn.operator:active {
+    background-color: #781b1d64;
+}
+
+
+javascript
+
+let currentInput = '';
+let operator = '';
+let previousInput = '';
+
+function appendNumber(number) {
+    if (operator === '' && currentInput === '0') {
+        currentInput = number;
+    } else {
+        currentInput += number;
+    }
+    updateDisplay();
+}
+
+function appendOperator(op) {
+    if (currentInput === '') return;
+    if (previousInput !== '') {
+        calculate();
+    }
+    operator = op;
+    previousInput = currentInput;
+    currentInput = '';
+    updateDisplay();
+}
+
+function calculate() {
+    if (operator === '' || currentInput === '' || previousInput === '') return;
+    const prev = parseFloat(previousInput);
+    const curr = parseFloat(currentInput);
+    let result;
+    
+    switch (operator) {
+        case '+':
+            result = prev + curr;
+            break;
+        case '-':
+            result = prev - curr;
+            break;
+        case '*':
+            result = prev * curr;
+            break;
+        case '/':
+            result = prev / curr;
+            break;
+    }
+
+    currentInput = result.toString();
+    operator = '';
+    previousInput = '';
+    updateDisplay();
+}
+
+function clearDisplay() {
+    currentInput = '';
+    operator = '';
+    previousInput = '';
+    updateDisplay();
+}
+
+function updateDisplay() {
+    const display = document.getElementById('display');
+    let displayText = '';
+
+    if (previousInput !== '') {
+        displayText += previousInput + ' ' + operator + ' ';
+    }
+    displayText += currentInput || '0';
+
+    display.textContent = displayText;
+}
